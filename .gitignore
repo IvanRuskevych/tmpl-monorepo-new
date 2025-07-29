@@ -1,0 +1,35 @@
+# Node
+node_modules/
+*.log
+*.tsbuildinfo
+
+# Build output
+dist/
+build/
+packages/**/dist/
+packages/**/build/
+
+# Build cache
+.tmp/
+
+# IDEs and tools
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env and credentials
+.env
+.env.local
+.env.*.local
+
+# Lint/format
+.eslintcache
+
+# Yarn/PNPM/NPM
+.pnpm-store/
+.yarn/
+.yarnrc.yml
+

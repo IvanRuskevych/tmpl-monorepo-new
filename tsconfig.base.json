@@ -1,0 +1,25 @@
+{
+    "compilerOptions" : {
+        /* 📚 Type Support */
+        "typeRoots"                        : [ "./src/types", "./node_modules/@types" ],
+        
+        /* 🧠 Strictness & Type Safety */
+        "strict"                           : true,
+        "strictNullChecks"                 : true,
+        "noImplicitAny"                    : true,
+        "noUnusedLocals"                   : true,
+        "noUnusedParameters"               : true,
+        "noFallthroughCasesInSwitch"       : true,
+        "forceConsistentCasingInFileNames" : true,
+        "skipLibCheck"                     : true,
+        "isolatedModules"                  : true,
+        "resolveJsonModule"                : true,
+        
+        /* 🌐 Module Interop */
+        "allowSyntheticDefaultImports"     : true,
+        "esModuleInterop"                  : true
+    },
+    
+    /* 📁 File System Scope */
+    "exclude"         : [ "node_modules", "dist", "**/*.spec.ts" ]
+}

@@ -1,0 +1,23 @@
+{
+    "name"            : "tmpl-monorepo",
+    "version"         : "1.0.0",
+    "description"     : "",
+    "main"            : "index.js",
+    "private"         : true,
+    "workspaces"      : [ "packages/*" ],
+    "keywords"        : [ ],
+    "author"          : "",
+    "license"         : "ISC",
+    "type"            : "module",
+    "scripts"         : {
+        "lint"      : "npx eslint packages/backend packages/frontend --cache",
+        "lint:fix"  : "npx eslint packages/backend packages/frontend --fix",
+        "lint:warn" : "eslint packages/backend packages/frontend || true",
+        "test"      : "echo \"Error: no test specified\" && exit 1",
+        "prepare"   : "husky"
+    },
+    "devDependencies" : {
+        "husky"       : "^9.1.7",
+        "lint-staged" : "^16.1.2"
+    }
+}
