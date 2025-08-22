@@ -1,0 +1,43 @@
+{
+    "extends"         : "../../tsconfig.base.json",
+    
+    "compilerOptions" : {
+        /* 🎯 Target & Environment */
+        "target"                       : "ES2022",
+        "lib"                          : [ "ES2022", "DOM", "DOM.Iterable" ],
+        
+        /* 🔧 Module settings & Bundler */
+        "module"                       : "ESNext",
+        "moduleResolution"             : "bundler",
+        "moduleDetection"              : "force",
+        "allowImportingTsExtensions"   : true,
+        "verbatimModuleSyntax"         : true,
+        
+        /* 📤 Output & Build Info */
+        "tsBuildInfoFile"              : "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "noEmit"                       : true,
+        "sourceMap"                    : true,
+        "declaration"                  : true,
+        "declarationMap"               : true,
+        "removeComments"               : true,
+        
+        /* 🧠 Strictness & Type Safety specific for frontend */
+        "noUncheckedSideEffectImports" : true,
+        "erasableSyntaxOnly"           : true,
+        
+        /* 📚 Type Support */
+        "types"                        : [ "vite/client" ],
+        
+        /* ⚛ JSX & React */
+        "jsx"                          : "react-jsx",
+        "useDefineForClassFields"      : true,
+        
+        /* 🔗 Path Aliases */
+        "baseUrl"                      : ".",
+        "paths"                        : { "~/*" : [ "./src/*" ] }
+    },
+    
+    /* 📁 File System Scope */
+    "include"         : [ "src", "vite.config.ts", "codegen.ts" ],
+    "exclude"         : [ "node_modules", "dist", "**/*.spec.ts" ]
+}

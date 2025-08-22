@@ -1,23 +1,33 @@
 {
-    "name"            : "tmpl-monorepo",
+    "name"            : "tmp-monorepo-base",
     "version"         : "1.0.0",
-    "description"     : "",
-    "main"            : "index.js",
-    "private"         : true,
-    "workspaces"      : [ "packages/*" ],
+    "description"     : "Monorepo with React frontend (Vite + TS) and Express backend (TS)",
     "keywords"        : [ ],
-    "author"          : "",
-    "license"         : "ISC",
+    "author"          : "Ivan Ruskevych <fullstack.dev.goit@gmail.com>",
+    "license"         : "MIT",
+    "private"         : true,
     "type"            : "module",
+    "workspaces"      : [ "packages/*" ],
+    
     "scripts"         : {
-        "lint"      : "npx eslint packages/backend packages/frontend --cache",
-        "lint:fix"  : "npx eslint packages/backend packages/frontend --fix",
+        "prepare"   : "husky",
+        "lint"      : "eslint packages/backend packages/frontend --cache",
         "lint:warn" : "eslint packages/backend packages/frontend || true",
-        "test"      : "echo \"Error: no test specified\" && exit 1",
-        "prepare"   : "husky"
+        "lint:fix"  : "eslint packages/backend packages/frontend --fix"
     },
+    
     "devDependencies" : {
-        "husky"       : "^9.1.7",
-        "lint-staged" : "^16.1.2"
+        "@eslint/js"                  : "9.33.0",
+        "eslint"                      : "9.33.0",
+        "eslint-config-prettier"      : "10.1.8",
+        "eslint-plugin-prettier"      : "5.5.4",
+        "eslint-plugin-react-hooks"   : "5.2.0",
+        "eslint-plugin-react-refresh" : "0.4.20",
+        "globals"                     : "16.3.0",
+        "husky"                       : "9.1.7",
+        "lint-staged"                 : "16.1.5",
+        "prettier"                    : "3.6.2",
+        "typescript"                  : "5.9.2",
+        "typescript-eslint"           : "8.40.0"
     }
 }
